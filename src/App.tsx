@@ -7,9 +7,9 @@ function App() {
     const [number, setNumber] = useState(0)
     const [disable, setDisable] = useState(false)
     const numberChange = () => {
-        let numberC = number + 1
-        setNumber(numberC)
-        if (numberC>= 5) {
+        let newNumber = number + 1
+        setNumber(newNumber)
+        if (newNumber >= 5) {
             setDisable(true)
         }
     }
@@ -21,13 +21,15 @@ function App() {
     return (
         <div>
             <Table number={number}/>
-            <Button name={"inc"}
-                    callBack={numberChange}
-                    disable={disable}
+            <Button
+                name={"inc"}
+                callBack={numberChange}
+                disable={disable}
             />
-            <Button name={"reset"}
-                    callBack={numberReset}
-                    disable={!disable}
+            <Button
+                name={"reset"}
+                callBack={numberReset}
+                disable={!disable}
             />
         </div>
     );
