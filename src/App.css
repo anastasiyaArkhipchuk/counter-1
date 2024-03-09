@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+.body{
+    display: grid;
+    grid-template-areas:
+"v";
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(22, 22, 41);
+    position: relative;
+}
+.counter {
+    grid-area: v;
+    display: grid;
+    grid-template-areas:
+"a a a"
+"a a a"
+"a a a"
+"b b b";
+background-color: rgb(22, 22, 41);
+    height: 600px;
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+    border-style: solid;
+    border-color: aqua;
+    border-radius: 25px;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.screen {
+    grid-area: a;
+    height: 300px;
+    width: 900px;
+    border-style: solid;
+    border-color: aqua;
+    border-radius: 20px;
+    background-color: aqua;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 250px;
+    color: black;
+}
+.screenDisable {
+    grid-area: a;
+    height: 300px;
+    width: 900px;
+    border-style: solid;
+    border-color: aqua;
+    border-radius: 20px;
+    background-color: aqua;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 250px;
+    color: crimson;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buttons {
+    grid-area: b;
+    display: grid;
+    grid-template-areas:
+"i r";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+    height: 150px;
+    width: 900px;
+    border-style: solid;
+    border-color: aqua;
+    border-radius: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.buttonINC > button {
+    grid-area: i;
+    height: 100px;
+    width: 300px;
+    background-color: aqua;
+    border-style: solid;
+    border-color: aqua;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttonRESET > button {
+    grid-area: r;
+    height: 100px;
+    width: 300px;
+    background-color: aqua;
+    border-style: solid;
+    border-color: aqua;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
 }

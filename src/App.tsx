@@ -19,18 +19,26 @@ function App() {
     }
 
     return (
-        <div>
-            <Table number={number}/>
-            <Button
-                name={"inc"}
-                callBack={numberChange}
-                disable={disable}
-            />
-            <Button
-                name={"reset"}
-                callBack={numberReset}
-                disable={!disable}
-            />
+        <div className={"body"}>
+            <div className="counter">
+                <div className={number<5 ? "screen" : "screenDisable"}><Table number={number}/></div>
+                <div className="buttons">
+                    <div className="buttonINC">
+                        <Button
+                            name={"inc"}
+                            callBack={numberChange}
+                            disable={disable}
+                        />
+                    </div>
+                    <div className="buttonRESET">
+                        <Button
+                            name={"reset"}
+                            callBack={numberReset}
+                            disable={!disable}
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
